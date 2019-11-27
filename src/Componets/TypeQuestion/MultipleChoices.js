@@ -15,10 +15,12 @@ export default class MultipleChoices extends Component {
             choice: 1,
             checked: false
         };
+       
     }
 
+    
     handleRemove = () => {
-        if ( this.state.choice > 1 ){
+        if (this.state.choice > 1) {
             this.setState({ choice: this.state.choice - 1 });
         }
     };
@@ -39,29 +41,32 @@ export default class MultipleChoices extends Component {
             let inputTotal = [];
             for (let index = 0; index < this.state.choice; index++) {
                 inputTotal.push(
-                        <View style={styles.rowCheckbox}
-                            // key={this.state.choice}
-                        >
-                            <CheckBox
-                                checkedIcon='check-square-o'
-                                uncheckedIcon='square-o'
-                                checked={this.state.checked}
-                            />
+                    <View style={styles.rowCheckbox}
+                    // key={this.state.choice}
+                    >
 
-                            <TextInput
-                                value={this.state.choice}
-                                placeholder="Choice text"
-                                style={styles.choiceText}
-                                // onChangeText={(choice) => this.setState({ choice })}
-                                // onKeyPress={this.handleAdd}
-                            />
+                        <CheckBox
+                           
+                            checked={this.state.checked}
+                            onPress={() => this.setState({ checked: !this.state.checked })}
+                            unchecked={this.state.unchecked}
+                            
+                        />
 
-                            <Icon
-                                name="ios-close"
-                                style={styles.iconremove}
-                                onPress={this.handleRemove}
-                            />
-                        </View>
+                        <TextInput
+                            value={this.state.choice}
+                            placeholder="Choice text"
+                            style={styles.choiceText}
+                        // onChangeText={(choice) => this.setState({ choice })}
+                        // onKeyPress={this.handleAdd}
+                        />
+
+                        <Icon
+                            name="ios-close"
+                            style={styles.iconremove}
+                            onPress={this.handleRemove}
+                        />
+                    </View>
                 );
             }
             return inputTotal;

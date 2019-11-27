@@ -86,19 +86,19 @@ export default class MultipleChoices extends Component {
     }
 
     render() {
-        const AnswerChoice = () => {
-            let AnswerChoiceArray = [];
-            for (let index = 0; index < this.state.choice; index++) {
-                AnswerChoiceArray.push(
-                    <SingleAnswereChoice key={index}
-                        handleRemove={() => this.handleRemove}
-                    />
-                );
-            }
-            // return this.state.AnswerChoice.map(Answere=>{
-            //     return 
-            // });
-        };
+        // const AnswerChoice = () => {
+        //     let AnswerChoiceArray = [];
+        //     for (let index = 0; index < this.state.choice; index++) {
+        //         AnswerChoiceArray.push(
+        //             <SingleAnswereChoice key={index}
+        //                 handleRemove={() => this.handleRemove}
+        //             />
+        //         );
+        //     }
+        //     // return this.state.AnswerChoice.map(Answere=>{
+        //     //     return 
+        //     // });
+        // };
         return (
             <View style={styles.container}>
                 <ScrollView>

@@ -79,12 +79,12 @@ export default class TextChoices extends Component {
                                 <Input />
                             </View>
 
-                            <TouchableOpacity style={styles.rowContainer} onPress={() => { this.handleAdd() }}>
+                            {/* <TouchableOpacity style={styles.rowContainer} onPress={() => { this.handleAdd() }}>
                                 <Icon style={styles.icon} name="ios-add-circle-outline" />
                                 <Text style={{
                                     paddingVertical: "3%"
                                 }}>Add more choice</Text>
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
                         </View>
 
                         <View>
